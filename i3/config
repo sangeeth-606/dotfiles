@@ -114,17 +114,18 @@ bindsym Mod1+space exec --no-startup-id rofi -show drun
 bindsym $mod+space exec --no-startup-id rofi -show combi
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+# change focus + move mouse to focused window
+bindsym $mod+h focus left;  exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 500 500
+bindsym $mod+j focus down;  exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 500 500
+bindsym $mod+k focus up;    exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 500 500
+bindsym $mod+l focus right; exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 500 500
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Left  focus left;  exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 500 500
+bindsym $mod+Down  focus down;  exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 500 500
+bindsym $mod+Up    focus up;    exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 500 500
+bindsym $mod+Right focus right; exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 500 500
+
 
 # move focused window
 bindsym $mod+Shift+h move left
