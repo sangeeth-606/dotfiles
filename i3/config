@@ -20,17 +20,22 @@ bar {
 
 exec --no-startup-id clipit
 
+bindsym $mod+Shift+t exec --no-startup-id ~/scripts/ocr.sh
+
 
 set $mod Mod4
 # set $mod Mod1
 
 # my own
-bindsym $mod+c exec nautilus
+# bindsym $mod+c exec nautilus
+bindsym $mod+c exec nemo
+exec --no-startup-id xfce4-clipman
 
 
 
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-scale ~/backgrounds/nice-blue-background.png
+exec --no-startup-id feh --bg-scale "/home/zape777/Pictures/wallpapers/Night monochrome.jpg"
+
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id xset s 1800 1800
